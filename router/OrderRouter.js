@@ -9,6 +9,6 @@ const orderRoute = express.Router();
 
 orderRoute.route("/").get(getOrders).post(createOrders);
 
-orderRoute.route("/:id").put(updateOrdersstate);
+orderRoute.route("/:id/:state").put(updateOrdersstate);
 
 export default orderRoute;

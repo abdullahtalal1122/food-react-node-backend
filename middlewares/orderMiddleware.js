@@ -17,7 +17,7 @@ const createOrders = async (req, res) => {
     const decodedToken = await verify(token);
 
     const neworder = new Order({
-      state: req.body.state,
+      state: "0",
       orderitems: req.body.orderItems,
       updatedBy: [decodedToken.userId],
     });
@@ -32,7 +32,7 @@ const createOrders = async (req, res) => {
 const updateOrdersstate = async (req, res) => {
   try {
     const orderId = req.params.id;
-    const newState = req.body.state;
+    const newState = req.params.state;
     const token = req.headers.authorization;
     const decodedToken = await verify(token);
 
