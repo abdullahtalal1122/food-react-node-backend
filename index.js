@@ -6,7 +6,7 @@ import bodyParser from "body-parser";
 import config from "./config/index.js";
 import cors from "cors";
 
-const port = 8000;
+const port = 5050;
 const app = express();
 config.db();
 app.use(cors());
